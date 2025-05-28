@@ -1,7 +1,11 @@
 fastapi
-uvicorn[standard]
-opencv-python
+uvicorn
+gunicorn
+websockets
 mediapipe
+opencv-python
+scikit-learn
+joblib
 # For M-series Macs, list tensorflow-macos and tensorflow-metal before deepface
 # to help pip establish the correct TensorFlow version for Apple Silicon first.
 tensorflow-macos  # For M-series Macs
@@ -9,6 +13,8 @@ tensorflow-metal  # For M-series Macs GPU acceleration
 deepface          # deepface should then use the TensorFlow version installed by tensorflow-macos
 python-multipart
 numpy
+
+
 # If not on M-series Mac, replace tensorflow-macos and tensorflow-metal with:
 # tensorflow  # or tensorflow-cpu if you don't have a compatible GPU
 
