@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-slate-900 text-slate-100; /* Example base styles */
+  font-family: 'Inter', sans-serif; /* Apply Inter globally */
+}
+
+/* Optional: For text-balance utility if you want to use it */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
