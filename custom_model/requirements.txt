@@ -1,0 +1,21 @@
+fastapi
+uvicorn[standard]
+opencv-python
+mediapipe
+# For M-series Macs, list tensorflow-macos and tensorflow-metal before deepface
+# to help pip establish the correct TensorFlow version for Apple Silicon first.
+tensorflow-macos  # For M-series Macs
+tensorflow-metal  # For M-series Macs GPU acceleration
+deepface          # deepface should then use the TensorFlow version installed by tensorflow-macos
+python-multipart
+numpy
+# If not on M-series Mac, replace tensorflow-macos and tensorflow-metal with:
+# tensorflow  # or tensorflow-cpu if you don't have a compatible GPU
+
+# Note on versions: If dependency conflicts like the one you experienced persist,
+# try pinning versions. For example, based on your error:
+# tensorflow-macos==2.16.2
+# tensorflow-metal  # (usually version-tied, no explicit pinning needed if TF-macos is pinned)
+# deepface==0.0.92  # (or the latest version of deepface; check its TF compatibility)
+# You can find the latest deepface version on PyPI.
+# Always ensure your virtual environment is clean before reinstalling with pinned versions.
