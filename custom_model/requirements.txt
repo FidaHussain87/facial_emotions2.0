@@ -4,15 +4,15 @@ gunicorn
 websockets
 mediapipe
 opencv-python
-scikit-learn
+# scikit-learn TODO: it can be uncommented if you want to use scikit-learn for training the model within model_train.py
 joblib
-tensorflow
+# tensorflow TODO: it can be uncommented if you want to use tensorflow for training the model within model_train.py
 # For M-series Macs, list tensorflow-macos and tensorflow-metal before deepface
 # to help pip establish the correct TensorFlow version for Apple Silicon first.
 # tensorflow-macos  # For M-series Macs
 #tensorflow-metal  # For M-series Macs GPU acceleration
-deepface          # deepface should then use the TensorFlow version installed by tensorflow-macos
-python-multipart
+# deepface          # deepface should then use the TensorFlow version installed by tensorflow-macos only for /server/main.py not in this custom trained model
+# python-multipart use this only when you want to upload files through the web interface
 numpy
 
 
