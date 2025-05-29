@@ -4,7 +4,7 @@ gunicorn
 websockets
 mediapipe
 opencv-python
-# scikit-learn TODO: it can be uncommented if you want to use scikit-learn for training the model within model_train.py
+scikit-learn
 joblib
 # tensorflow TODO: it can be uncommented if you want to use tensorflow for training the model within model_train.py
 # For M-series Macs, list tensorflow-macos and tensorflow-metal before deepface
