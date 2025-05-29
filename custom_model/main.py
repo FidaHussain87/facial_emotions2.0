@@ -60,7 +60,7 @@ app = FastAPI(
 )
 
 # CORS Configuration
-origins = ["http://localhost:3000", "http://127.0.0.1:3000","https://facial-emotions2-0-d4e2yrhwf-fidahussain87s-projects.vercel.app/"] # Add your frontend URL if different
+origins = ["http://localhost:3000", "http://127.0.0.1:3000","https://facial-emotions2-0.vercel.app"] # Add your frontend URL if different
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
