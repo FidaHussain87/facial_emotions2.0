@@ -60,7 +60,7 @@ app = FastAPI(
 )
 
 # CORS Configuration
-origins = ["http://localhost:3000", "http://127.0.0.1:3000"] # Add your frontend URL if different
+origins = ["http://localhost:3000", "http://127.0.0.1:3000","https://facial-emotions2-0-d4e2yrhwf-fidahussain87s-projects.vercel.app/"] # Add your frontend URL if different
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -267,14 +267,14 @@ async def get_api_info():
         "api_name": "Custom Facial Emotion Detection API",
         "version": app.version,
         "description": "Detects facial landmarks and uses a custom model for emotion classification.",
-        "websocket_endpoint": "/ws/custom_emotion_detection_v2",
+        "websocket_endpoint": "/ws/emotion_detection",
         "custom_model_status": model_status,
         "expected_emotions": default_emotion_list
     }
 
 # To run the server (if running this file directly):
 # for running this script please run this command into terminal in root directory:
-#uvicorn main:app --reload --host 0.0.0.0 --port 8000
+# uvicorn main:app --reload --host 0.0.0.0 --port 8000
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
